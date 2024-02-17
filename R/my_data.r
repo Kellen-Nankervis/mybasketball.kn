@@ -2,5 +2,6 @@
 #' @description Load my custom dataset
 #' @export
 my_data <- function() {
-  data("my_dataset")  # Load your dataset
+  data <- read.csv("data-raw/cbbga24_2023.csv")
+  return(data)  # Load your dataset
 }
