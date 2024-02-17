@@ -2,24 +2,22 @@
 % Please edit documentation in R/home_vs_away_points.R
 \name{home_vs_away_points}
 \alias{home_vs_away_points}
-\title{Create a ggplot box plot comparing the scores of home and away teams or a selected team's wins and losses.}
+\title{Create a ggplot box plot comparing the scores of home and away teams.}
 \usage{
-home_vs_away_points(tibble, team = NULL)
+home_vs_away_points(tibble)
 }
 \arguments{
 \item{tibble}{A tibble containing game data with columns Score1 and Score2 representing
 the scores of the home and away teams, respectively.}
-
-\item{team}{(Optional) A character string specifying the team name for which the box plot should be created.
-Defaults to NULL.}
 }
 \value{
-A ggplot box plot comparing the scores of home and away teams or a selected team's wins and losses.
+A ggplot box plot comparing the scores of home and away teams.
 }
 \description{
 This function takes a tibble containing game data and creates a box plot
-comparing the scores of home and away teams when no team is specified,
-or creates a box plot showing the distribution of scores for a selected team's wins and losses.
+comparing the scores of home and away teams. It pivots the data to have a
+tidy format suitable for plotting and creates a box plot showing the
+distribution of scores for both home and away teams.
 }
 \examples{
 # Load necessary packages
@@ -33,8 +31,5 @@ game_data <- tibble(
 
 # Create the box plot of home vs. away scores
 home_vs_away_points(game_data)
-
-# Create the box plot of a selected team's wins and losses
-home_vs_away_points(game_data, "Akron")
 
 }
