@@ -3,6 +3,7 @@
 export(filter_team)
 export(home_vs_away_points)
 export(home_vs_away_wins)
+export(runBball)
 export(team_win_loss)
 importFrom(dplyr,bind_cols)
 importFrom(dplyr,filter)
